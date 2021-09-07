@@ -11,6 +11,9 @@ LABEL about.home="http://www.clustal.org/omega/"
 LABEL about.documentation="http://www.clustal.org/omega/#about.documentation"
 LABEL license="http://www.clustal.org/omega/"
 
+# Build as root (needed for the biocontainers setup)
+USER root
+
 # Install clustalo
 RUN apt-get update && \
   apt-get install -y \
